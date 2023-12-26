@@ -1,10 +1,11 @@
 "use client";
+
 import Link from 'next/link';
 import React from 'react'
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-    // const item = useSelector((state)=>state.cart)
+  const item = useSelector((state)=>state.cart)
   return (
     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
          <span>Redux Nextjs-13.4</span>

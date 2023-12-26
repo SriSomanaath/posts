@@ -1,9 +1,14 @@
 "use client";
 
 import React,{useState,useEffect} from 'react'
+import { useDispatch } from 'react-redux';
+import { add } from '@/Redux/Cartslice';
+
 
 export default function Home() {
+
   const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
 
   const getProducts = async () => {
     const res = await fetch('https://fakestoreapi.com/products');
